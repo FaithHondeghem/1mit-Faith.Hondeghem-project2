@@ -18,7 +18,6 @@ $kleur-accent--hover: #FFF0A1;
     transition: all .35s ease;
   }
   
-  
   .c-nav li {
     display: inline-block;
     list-style: outside none none;
@@ -35,6 +34,10 @@ $kleur-accent--hover: #FFF0A1;
     position: relative;
     text-decoration: none;
     font-size: 20px;
+  }
+
+  .c-nav a:active {
+    color: $kleur-accent;
   }
   
   .c-nav a::before,

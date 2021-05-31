@@ -34,6 +34,10 @@
   font-size: 20px;
 }
 
+.c-nav a:active {
+  color: #E0D07C;
+}
+
 .c-nav a::before,
 .c-nav a::after {
   content: '';
