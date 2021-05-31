@@ -1,0 +1,125 @@
+$kleur-secondary: #022329;
+$kleur-secondary--hover: #63898F;
+$kleur-accent: #E0D07C;
+$kleur-accent--hover: #FFF0A1;
+
+.c-nav {
+    font-family: interstate, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12pt;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: $kleur-secondary;
+}
+  
+  .c-nav * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+  }
+  
+  
+  .c-nav li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: .5em 0.5em;
+    padding: 1rem;
+    :active {
+        color: $kleur-accent;
+    }
+  }
+  
+  .c-nav a {
+    padding: .5em .8em;
+    color: rgba(255, 255, 255, 0.589);
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .c-nav a::before,
+  .c-nav a::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+  
+  .c-nav a::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid $kleur-accent--hover;
+    border-right: 3px solid $kleur-accent;
+    transform: translate(-100%, 50%);
+  }
+  
+  .c-nav a:after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid $kleur-accent;
+    border-left: 3px solid $kleur-accent--hover;
+    transform: translate(100%, -50%);
+  }
+  
+  .c-nav a:hover:before,
+  .c-nav a:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+  
+  .c-nav a:hover {
+    color: $kleur-accent--hover;
+  }
+
+  /*zoekveld*/
+  .c-search {
+    display: inline-flex;
+    flex: 1 1 300px;
+    position: relative;
+    border: 2px solid $kleur-accent;
+    border-radius: 0.25rem;
+    overflow: hidden;
+  
+    &__txt {
+      font-family: interstate, sans-serif;
+      font-style: italic;
+      font-weight: 50;
+      font-size: 12pt;
+      padding: 10px;
+      width: 75%;
+      border-top: none;
+      border-left: none;
+      border-bottom: none;
+      background-color: transparent;
+      color: $kleur-accent;
+    }
+  
+    &__btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      width: 25%;
+      &--icon {
+        font-size: 1.25rem;
+        padding: 0;
+        color: $kleur-accent;  
+      }
+    }
+  
+    &__btn:hover {
+      border: none;
+      background-color: $kleur-accent;
+      color: white;
+    }
+    
+  }
+  
+  .c-search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
