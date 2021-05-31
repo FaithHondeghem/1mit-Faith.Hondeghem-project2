@@ -15,6 +15,10 @@
   transition: all .35s ease;
 }
 
+.c-nav--item:active {
+  color: #E0D07C;
+}
+
 .c-nav li {
   display: inline-block;
   list-style: outside none none;

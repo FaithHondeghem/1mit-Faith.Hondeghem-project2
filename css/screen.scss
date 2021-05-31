@@ -18,6 +18,9 @@ $kleur-accent--hover: #FFF0A1;
     transition: all .35s ease;
   }
   
+  .c-nav--item:active {
+    color: $kleur-accent;
+  }
   
   .c-nav li {
     display: inline-block;
